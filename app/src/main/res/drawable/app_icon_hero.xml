@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  HERO ICON — big centered icon shown on the very first frame of launch,
+  before the splash screen animation begins.  Same design language as
+  app_icon.xml but with a rounded-square frame + gloss + drop shadow so
+  it feels like a real 3D adaptive icon lifted off the home-screen.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 3D drop shadow (soft dark halo) -->
+    <item android:top="6dp" android:left="4dp" android:right="4dp" android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="34dp" />
+            <solid android:color="#40000000" />
+        </shape>
+    </item>
+
+    <!-- Main icon body with rounded corners and gradient background -->
+    <item android:top="0dp" android:bottom="8dp">
+        <layer-list>
+
+            <!-- Blue sky top half + green grass bottom half -->
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="32dp" />
+                    <gradient
+                        android:angle="270"
+                        android:startColor="#22c55e"
+                        android:centerColor="#4ade80"
+                        android:endColor="#1e40af"
+                        android:type="linear" />
+                </shape>
+            </item>
+
+            <!-- Sky gradient overlay top half -->
+            <item android:top="0dp" android:left="0dp" android:right="0dp" android:bottom="60dp">
+                <shape android:shape="rectangle">
+                    <corners
+                        android:topLeftRadius="32dp"
+                        android:topRightRadius="32dp"
+                        android:bottomLeftRadius="0dp"
+                        android:bottomRightRadius="0dp" />
+                    <gradient
+                        android:angle="270"
+                        android:startColor="#60a5fa"
+                        android:endColor="#1e3a8a"
+                        android:type="linear" />
+                </shape>
+            </item>
+
+            <!-- Inner candlestick illustration -->
+            <item android:top="12dp" android:left="12dp" android:right="12dp" android:bottom="12dp">
+                <bitmap
+                    android:src="@drawable/app_icon"
+                    android:gravity="center" />
+            </item>
+
+            <!-- Top gloss highlight -->
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="32dp" />
+                    <gradient
+                        android:angle="270"
+                        android:startColor="#00FFFFFF"
+                        android:centerColor="#00FFFFFF"
+                        android:endColor="#66FFFFFF"
+                        android:type="linear" />
+                </shape>
+            </item>
+
+            <!-- Subtle rim border -->
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="32dp" />
+                    <stroke
+                        android:width="1.5dp"
+                        android:color="#40FFFFFF" />
+                    <solid android:color="@color/transparent" />
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+
+</layer-list>

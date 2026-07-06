@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover" />
+<title>Deriv MT5 Terminal — Offline</title>
+<style>
+  :root {
+    --bg1: #0a3d0a; --bg2: #0d5e1e; --bg3: #1565c0; --bg4: #0d47a1;
+    --card: rgba(255,255,255,0.06);
+    --border: rgba(255,255,255,0.14);
+    --text: #ffffff;
+    --muted: rgba(255,255,255,0.65);
+    --accent: #22c55e;
+    --danger: #ef4444;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    margin: 0; padding: 0; width: 100%; min-height: 100dvh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, sans-serif;
+    color: var(--text);
+    background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 25%, var(--bg3) 50%, var(--bg4) 75%, var(--bg1) 100%);
+    background-size: 400% 400%;
+    animation: bg 8s ease infinite;
+    overflow-x: hidden;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+  @keyframes bg { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+  .shell {
+    max-width: 480px; margin: 0 auto; padding: 20px 18px 40px;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .header {
+    display: flex; justify-content: space-between; align-items: center;
+    width: 100%; padding: 8px 4px 20px;
+  }
+  .brand { font-weight: 800; font-size: 15px; letter-spacing: 0.05em; }
+  .brand .accent { color: #4ade80; }
+  .status {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.4);
+    padding: 4px 10px; border-radius: 999px; font-size: 10px; font-weight: 700;
+    color: #fecaca;
+  }
+  .status::before {
+    content: ""; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--danger); box-shadow: 0 0 8px var(--danger);
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  .sphere-wrap { position: relative; margin: 4px 0 24px; }
+  .sphere {
+    width: 132px; height: 132px; border-radius: 50%;
+    background: linear-gradient(to bottom, #60a5fa 0%, #60a5fa 50%, #4ade80 50%, #4ade80 100%);
+    box-shadow: inset -8px -12px 24px rgba(0,0,0,0.25),
+                inset 8px 12px 20px rgba(255,255,255,0.35),
+                0 12px 28px rgba(0,0,0,0.4),
+                0 0 32px rgba(96,165,250,0.35);
+    position: relative;
+    animation: bob 3.5s ease-in-out infinite;
+  }
+  @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+  .sphere::after {
+    content: ""; position: absolute; top: 12%; left: 18%; width: 52%; height: 30%;
+    background: radial-gradient(ellipse at 30% 30%, rgba(255,255,255,0.65), transparent 70%);
+    border-radius: 50%;
+  }
+  .sphere-mt5 {
+    position: absolute; inset: 0; display: flex; align-items: flex-end;
+    justify-content: center; padding-bottom: 22px; font-weight: 900;
+    font-size: 22px; letter-spacing: 0.05em; text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+  .sphere-chart {
+    position: absolute; inset: 15px 12px; display: flex; align-items: end;
+    justify-content: space-between; opacity: 0.9;
+  }
+  .sphere-chart .c {
+    width: 6px; border-radius: 1px;
+  }
+
+  h1 { font-size: 22px; font-weight: 800; margin: 0 0 4px; letter-spacing: 0.02em; }
+  .sub { font-size: 12px; color: var(--muted); margin: 0 0 24px; text-align: center; }
+
+  .card {
+    width: 100%; background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 14px 16px; backdrop-filter: blur(10px);
+    margin-bottom: 12px;
+  }
+  .card h3 { font-size: 11px; font-weight: 700; margin: 0 0 8px; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; }
+
+  .row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; font-size: 13px; }
+  .row + .row { border-top: 1px dashed rgba(255,255,255,0.08); }
+  .row .k { color: var(--muted); }
+  .row .v { font-family: ui-monospace, monospace; font-weight: 600; }
+
+  .btn {
+    display: block; width: 100%; padding: 14px 18px; border-radius: 10px;
+    border: none; font-weight: 800; font-size: 14px; letter-spacing: 0.02em;
+    color: #fff; cursor: pointer; text-align: center;
+    background: linear-gradient(180deg, #22c55e 0%, #15803d 100%);
+    box-shadow: 0 4px 12px rgba(34,197,94,0.4), inset 0 1px 0 rgba(255,255,255,0.35);
+    transition: transform 0.1s ease, filter 0.15s ease;
+  }
+  .btn:active { transform: scale(0.98); filter: brightness(0.92); }
+  .btn.secondary {
+    background: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
+    box-shadow: 0 4px 12px rgba(59,130,246,0.35), inset 0 1px 0 rgba(255,255,255,0.35);
+    margin-top: 10px;
+  }
+  .btn.ghost {
+    background: rgba(255,255,255,0.06); box-shadow: none;
+    border: 1px solid rgba(255,255,255,0.14); margin-top: 8px; color: var(--muted);
+    font-weight: 600;
+  }
+
+  .list { max-height: 180px; overflow-y: auto; margin: 4px -6px 0; }
+  .list-item {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 8px 10px; border-radius: 8px; font-size: 12px;
+  }
+  .list-item:hover { background: rgba(255,255,255,0.04); }
+  .list-item .name { font-weight: 600; }
+  .list-item .meta { font-size: 10px; color: var(--muted); font-family: ui-monospace, monospace; }
+  .empty { color: var(--muted); font-size: 12px; text-align: center; padding: 12px 0; font-style: italic; }
+
+  .footer {
+    margin-top: 20px; font-size: 10px; color: rgba(255,255,255,0.35);
+    text-align: center; letter-spacing: 0.15em;
+  }
+  .toolbar {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;
+    width: 100%; margin-top: 8px;
+  }
+  .tool {
+    padding: 10px 4px; border-radius: 10px; text-align: center;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    font-size: 10px; font-weight: 600; color: var(--muted); cursor: pointer;
+  }
+  .tool .ico { font-size: 18px; display: block; margin-bottom: 4px; }
+  .tool:active { background: rgba(255,255,255,0.1); }
+</style>
+</head>
+<body>
+  <div class="shell">
+
+    <div class="header">
+      <div class="brand"><span class="accent">Deriv</span> MT5</div>
+      <div class="status">OFFLINE</div>
+    </div>
+
+    <div class="sphere-wrap">
+      <div class="sphere">
+        <div class="sphere-chart" id="miniChart"></div>
+        <div class="sphere-mt5">MT5</div>
+      </div>
+    </div>
+
+    <h1>You're offline</h1>
+    <p class="sub">Live market data is paused. Your saved workspace,<br />templates, and MetaEditor files are available below.</p>
+
+    <div class="card">
+      <h3>Connection Status</h3>
+      <div class="row"><span class="k">Network</span><span class="v" id="netState">Checking…</span></div>
+      <div class="row"><span class="k">Terminal URL</span><span class="v" id="termUrl" style="font-size:10px;">—</span></div>
+      <div class="row"><span class="k">Last seen online</span><span class="v" id="lastSeen">—</span></div>
+    </div>
+
+    <button class="btn" id="retryBtn">↻&nbsp;&nbsp;Retry Online</button>
+    <button class="btn secondary" id="statusBtn">📡&nbsp;&nbsp;Check Connection</button>
+
+    <div class="card" style="margin-top:20px;">
+      <h3>Saved Templates</h3>
+      <div class="list" id="templates"><div class="empty">No saved templates yet.</div></div>
+    </div>
+
+    <div class="card">
+      <h3>Offline Tools</h3>
+      <div class="toolbar">
+        <div class="tool" onclick="alert('MetaEditor files are preserved in local storage and will reload when you\\'re back online.')"><span class="ico">📝</span>MetaEditor</div>
+        <div class="tool" onclick="alert('App Lock (PIN/Pattern/Fingerprint) works offline — configure it in the online app first.')"><span class="ico">🔒</span>App Lock</div>
+        <div class="tool" onclick="alert('Chart templates are backed up to your device storage under sdcard/Android/media/.../terminal/templates/.')"><span class="ico">📂</span>Data Folder</div>
+        <div class="tool" onclick="alert('Trade history is preserved locally. New orders require an online connection to the Deriv API.')"><span class="ico">📊</span>History</div>
+      </div>
+    </div>
+
+    <div class="footer">POWERED BY DERIV WEBSOCKET API · v3.0</div>
+
+  </div>
+
+<script>
+  // ---------- mini candle chart inside the sphere ----------
+  (function () {
+    var wrap = document.getElementById('miniChart');
+    if (!wrap) return;
+    var candles = [
+      { h: 30, up: true }, { h: 24, up: false }, { h: 34, up: true },
+      { h: 40, up: true }, { h: 32, up: false }, { h: 46, up: true },
+      { h: 52, up: true }
+    ];
+    candles.forEach(function (c) {
+      var el = document.createElement('div');
+      el.className = 'c';
+      el.style.height = c.h + '%';
+      el.style.background = c.up ? '#16a34a' : '#dc2626';
+      wrap.appendChild(el);
+    });
+  })();
+
+  // ---------- network status detection ----------
+  function checkNetwork() {
+    var el = document.getElementById('netState');
+    if (!el) return;
+    el.textContent = navigator.onLine ? 'Online (reachable?)' : 'Offline';
+    el.style.color = navigator.onLine ? '#4ade80' : '#fecaca';
+  }
+  window.addEventListener('online', checkNetwork);
+  window.addEventListener('offline', checkNetwork);
+  checkNetwork();
+
+  // ---------- terminal URL surfaced by native bridge ----------
+  try {
+    var url = (window.TerminalBridge && window.TerminalBridge.getTerminalUrl)
+      ? window.TerminalBridge.getTerminalUrl() : '';
+    var u = document.getElementById('termUrl');
+    if (u && url) u.textContent = url.replace(/^https?:\/\//, '');
+    else if (u) u.textContent = 'not set';
+  } catch (e) {}
+
+  // ---------- last seen online timestamp ----------
+  try {
+    var stamp = localStorage.getItem('mt5_last_online');
+    var el = document.getElementById('lastSeen');
+    if (el) el.textContent = stamp
+      ? new Date(parseInt(stamp, 10)).toLocaleString()
+      : 'never';
+  } catch (e) {}
+
+  // ---------- saved templates ----------
+  try {
+    var raw = localStorage.getItem('terminal_templates') || '[]';
+    var list = JSON.parse(raw);
+    var box = document.getElementById('templates');
+    if (list && list.length && box) {
+      box.innerHTML = '';
+      list.slice(0, 8).forEach(function (t) {
+        var row = document.createElement('div');
+        row.className = 'list-item';
+        row.innerHTML = '<div><div class="name">' + escapeHtml(t.name || 'Untitled') + '</div>' +
+          '<div class="meta">' + escapeHtml(t.activeSymbolName || '') + ', ' +
+          escapeHtml(t.activeTimeframe || '') + ' · ' + escapeHtml(t.chartType || '') + '</div></div>' +
+          '<div class="meta">' + (t.updatedAt ? new Date(t.updatedAt).toLocaleDateString() : '') + '</div>';
+        box.appendChild(row);
+      });
+    }
+  } catch (e) {}
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  // ---------- retry button — asks native bridge to reload terminal ----------
+  document.getElementById('retryBtn').addEventListener('click', function () {
+    if (window.TerminalBridge && window.TerminalBridge.reloadTerminal) {
+      window.TerminalBridge.reloadTerminal();
+    } else {
+      window.location.reload();
+    }
+  });
+
+  // ---------- diagnostics button ----------
+  document.getElementById('statusBtn').addEventListener('click', function () {
+    var text = 'Network: ' + (navigator.onLine ? 'connected' : 'disconnected') + '\n';
+    try {
+      if (window.TerminalBridge && window.TerminalBridge.getNetworkStatus) {
+        var j = JSON.parse(window.TerminalBridge.getNetworkStatus() || '{}');
+        text += 'Transport: ' + (j.type || 'unknown') + '\n';
+        text += 'Metered: ' + (j.metered ? 'yes' : 'no') + '\n';
+        text += 'VPN: ' + (j.vpn ? 'on' : 'off') + '\n';
+      }
+    } catch (e) {}
+    alert(text);
+  });
+</script>
+</body>
+</html>

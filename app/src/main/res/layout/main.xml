@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Splash Layout -->
+    <RelativeLayout
+        android:id="@+id/splashLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:id="@+id/logoFrame"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/logo_frame_bg">
+
+            <ImageView
+                android:id="@+id/splashLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/splash_logo"
+                android:scaleType="fitCenter"
+                android:padding="16dp"/>
+
+            <View
+                android:id="@+id/scanLine"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#66FFFFFF"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/logo_frame_border"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/splashCenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/bracketTL"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/bracket_tl"
+                    android:scaleType="fitXY"/>
+
+                <View
+                    android:id="@+id/dividerLine"
+                    android:layout_width="60dp"
+                    android:layout_height="2dp"
+                    android:background="@drawable/divider_line"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"/>
+
+                <ImageView
+                    android:id="@+id/bracketTR"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/bracket_tr"
+                    android:scaleType="fitXY"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/animTextContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="28dp">
+
+                <TextView
+                    android:id="@+id/splashTagline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_tagline"
+                    android:textColor="@color/text_white"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.1"/>
+
+                <TextView
+                    android:id="@+id/splashVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_version"
+                    android:textColor="@color/text_muted"
+                    android:textSize="12sp"
+                    android:layout_marginTop="6dp"
+                    android:letterSpacing="0.2"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/statusPill"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="56dp"
+            android:background="@drawable/status_pill"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp">
+
+            <View
+                android:id="@+id/statusDot"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/dot_obsidian"/>
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Initializing..."
+                android:textColor="@color/text_white"
+                android:textSize="13sp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="sans-serif"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Main Layout -->
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/splash_background"
+        android:visibility="gone">
+
+        <WebView
+            android:id="@+id/webview1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ProgressBar
+            android:id="@+id/webProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp"
+            android:layout_alignParentTop="true"
+            android:progressDrawable="@drawable/progress_bar"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <!-- No Internet Layout -->
+    <LinearLayout
+        android:id="@+id/noInternetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/splash"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📡"
+            android:textSize="56sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Connection"
+            android:textColor="@color/text_white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Could not load the page.\nThe terminal can still open offline with cached history."
+            android:textColor="@color/text_muted"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="4dp"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"/>
+
+        <Button
+            android:id="@+id/retryBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RETRY"
+            android:textColor="@color/text_white"
+            android:background="@drawable/btn_obsidian"
+            android:layout_marginTop="28dp"
+            android:paddingStart="44dp"
+            android:paddingEnd="44dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.15"
+            android:elevation="4dp"
+            android:stateListAnimator="@null"/>
+    </LinearLayout>
+</FrameLayout>

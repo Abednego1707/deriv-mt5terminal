@@ -1,0 +1,202 @@
+[
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-mdpi_ic_launcher_background.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-mdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_progress_fill.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/progress_fill.xml"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_logo_frame_bg.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/logo_frame_bg.xml"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/raw_trade.wav.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/raw/trade.wav"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_app_icon.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/app_icon.xml"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_progress_silver.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/progress_silver.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_logo_frame_border.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/logo_frame_border.xml"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_app_icon_hero.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/app_icon_hero.xml"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-xxhdpi_ic_launcher_background.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-xxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_divider_line.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/divider_line.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_ic_launcher.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/ic_launcher.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_scan_line.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/scan_line.xml"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-hdpi_ic_launcher_background.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-hdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/raw_launch.wav.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/raw/launch.wav"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_progress_track.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/progress_track.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_btn_obsidian.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/btn_obsidian.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_ic_launcher_round.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/layout_main.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/layout/main.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable-xhdpi_app_icon.png.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable-xhdpi/app_icon.png"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_dot_obsidian.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/dot_obsidian.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_bracket_tl.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/bracket_tl.xml"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_progress_bar.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/progress_bar.xml"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable-xhdpi_default_image.png.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable-xhdpi/default_image.png"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-xxxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_status_pill.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/status_pill.xml"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/raw_connect.wav.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/raw/connect.wav"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/raw_alert.wav.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/raw/alert.wav"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_splash_logo.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/splash_logo.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_splash.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/splash.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/raw_error.wav.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/raw/error.wav"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-debug-32:/drawable_bracket_tr.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/8.13/com.deriv.mt5terminal.app-main-34:/drawable/bracket_tr.xml"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.deriv.mt5terminal.app-debug-32:/mipmap-xhdpi_ic_launcher_background.png.flat",
+        "source": "com.deriv.mt5terminal.app-main-34:/mipmap-xhdpi/ic_launcher_background.png"
+    }
+]

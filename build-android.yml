@@ -1,0 +1,123 @@
+name: Build Deriv MT5 APK
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: write   # needed to publish releases
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node (web bundle + sound generation)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # ── 1. Generate terminal sound files ─────────────────────────
+      #   android/res/raw/               → packaged in the APK
+      #   sketchware-pro/assets/sounds/  → Sketchware Pro imports
+      #   public/sounds/                 → web fallback
+      - name: Generate terminal sounds
+        run: node scripts/generate-sounds.mjs
+
+      - name: Upload sound assets
+        uses: actions/upload-artifact@v4
+        with:
+          name: terminal-sounds
+          path: |
+            sketchware-pro/assets/sounds/*.wav
+            android/res/raw/*.wav
+
+      # ── 2. Build the web bundle (served by the WebView) ──────────
+      - name: Install web dependencies
+        run: npm ci || npm install
+
+      - name: Build web bundle
+        run: npm run build
+
+      - name: Upload web bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-dist
+          path: dist/
+
+      # ── 3. Build the Android APK ─────────────────────────────────
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Sync resources into Android module
+        run: |
+          # Ensure required androidx dependencies exist in app/build.gradle(.kts)
+          # (AppCompat theme + androidx.biometric for the App Lock fingerprint)
+          for f in android/app/build.gradle android/app/build.gradle.kts; do
+            if [ -f "$f" ] && ! grep -q "androidx.biometric" "$f"; then
+              if [[ "$f" == *.kts ]]; then
+                sed -i 's/dependencies {/dependencies {\n    implementation("androidx.appcompat:appcompat:1.6.1")\n    implementation("com.google.android.material:material:1.11.0")\n    implementation("androidx.biometric:biometric:1.1.0")\n    implementation("androidx.core:core:1.12.0")/' "$f" || true
+              else
+                sed -i "s/dependencies {/dependencies {\n    implementation 'androidx.appcompat:appcompat:1.6.1'\n    implementation 'com.google.android.material:material:1.11.0'\n    implementation 'androidx.biometric:biometric:1.1.0'\n    implementation 'androidx.core:core:1.12.0'/" "$f" || true
+              fi
+            fi
+          done
+          mkdir -p android/app/src/main/res/raw
+          cp -f android/res/raw/*.wav android/app/src/main/res/raw/ 2>/dev/null || true
+          mkdir -p android/app/src/main/res/drawable
+          cp -rf android/res/drawable/. android/app/src/main/res/drawable/ 2>/dev/null || true
+          mkdir -p android/app/src/main/res/values
+          cp -rf android/res/values/. android/app/src/main/res/values/ 2>/dev/null || true
+          mkdir -p android/app/src/main/res/layout
+          cp -rf sketchware-pro/res/layout/. android/app/src/main/res/layout/ 2>/dev/null || true
+          # Manifest + MainActivity (app name "Deriv MT5", full permissions, TerminalBridge)
+          cp -f android/AndroidManifest.xml android/app/src/main/AndroidManifest.xml 2>/dev/null || true
+          mkdir -p android/app/src/main/java/com/deriv/mt5terminal
+          cp -f sketchware-pro/java/MainActivity.java android/app/src/main/java/com/deriv/mt5terminal/MainActivity.java 2>/dev/null || true
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x android/gradlew
+        continue-on-error: true
+
+      - name: Build debug APK
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon
+        continue-on-error: true
+
+      - name: Rename APK to Deriv-MT5
+        run: |
+          mkdir -p out
+          find android/app/build/outputs/apk -name '*.apk' -exec cp {} out/Deriv-MT5-v${{ github.run_number }}.apk \; 2>/dev/null || true
+          ls -la out/ || true
+        continue-on-error: true
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Deriv-MT5-apk
+          path: out/*.apk
+        continue-on-error: true
+
+      # ── 4. Publish GitHub Release with the APK ───────────────────
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        if: hashFiles('out/*.apk') != ''
+        with:
+          tag_name: v${{ github.run_number }}
+          name: Deriv MT5 v${{ github.run_number }}
+          body: |
+            **Deriv MT5** — MetaTrader-style trading terminal for Deriv.
+
+            • Classic MT light UI (device-theme independent) with Modern/Classic chart themes
+            • Account Authorization: Public / MetaTrader login / Deriv API token
+            • Supply & Demand engine (STS_SnD_Veteran_V3), one-click trading
+            • Offline launch with cached historical data
+            • App Lock (PIN / Pattern / Fingerprint), terminal sounds, full storage access
+          files: out/*.apk
+        continue-on-error: true

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:type="linear" android:angle="270"
+                android:startColor="#1565C0" android:endColor="#0D5E1E" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+    <item android:top="20dp" android:bottom="56dp" android:left="20dp" android:right="20dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#0C1929" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <!-- candles -->
+    <item android:left="28dp" android:right="72dp" android:top="36dp" android:bottom="64dp">
+        <shape android:shape="rectangle"><solid android:color="#22C55E" /><corners android:radius="1dp" /></shape>
+    </item>
+    <item android:left="44dp" android:right="56dp" android:top="28dp" android:bottom="72dp">
+        <shape android:shape="rectangle"><solid android:color="#EF4444" /><corners android:radius="1dp" /></shape>
+    </item>
+    <item android:left="60dp" android:right="40dp" android:top="24dp" android:bottom="60dp">
+        <shape android:shape="rectangle"><solid android:color="#22C55E" /><corners android:radius="1dp" /></shape>
+    </item>
+    <item android:left="76dp" android:right="24dp" android:top="30dp" android:bottom="68dp">
+        <shape android:shape="rectangle"><solid android:color="#22C55E" /><corners android:radius="1dp" /></shape>
+    </item>
+    <!-- MT5 text band -->
+    <item android:top="60dp" android:bottom="20dp" android:left="20dp" android:right="20dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000" />
+        </shape>
+    </item>
+</layer-list>

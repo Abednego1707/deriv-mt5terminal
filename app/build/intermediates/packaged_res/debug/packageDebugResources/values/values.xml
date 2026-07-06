@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="accent_bear">#EF4444</color>
+    <color name="accent_bull">#22C55E</color>
+    <color name="accent_gold">#F59E0B</color>
+    <color name="brand_blue">#0D3A72</color>
+    <color name="brand_blue_light">#1963B5</color>
+    <color name="brand_green">#0D5E1E</color>
+    <color name="colorAccent">#03A9F4</color>
+    <color name="colorControlHighlight">#FFFFFF</color>
+    <color name="colorControlNormal">#03A9F4</color>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#0D47A1</color>
+    <color name="ic_launcher_background">#0D3A72</color>
+    <color name="splash_background">#0C1929</color>
+    <color name="text_muted">#8FA7C4</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <string name="app_name">Deriv MT5</string>
+    <string name="app_tagline">Designed to perfection</string>
+    <string name="app_version">v12.5.0</string>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorControlHighlight</item>
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+        
+        <item name="android:windowBackground">@color/splash_background</item>
+        <item name="android:statusBarColor" ns1:targetApi="lollipop">@color/brand_blue</item>
+        
+        <item name="android:forceDarkAllowed" ns1:targetApi="q">false</item>
+    </style>
+    <style name="AppTheme.DebugActivity" parent="AppTheme">
+        <item name="android:windowNoTitle">false</item>
+    </style>
+    <style name="AppTheme.FullScreen" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="AppTheme.NoActionBarLaunch" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>

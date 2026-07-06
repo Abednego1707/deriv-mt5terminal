@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ═══════════════════════════════════════════════════════════════
+     REQUIRES: AppCompat + Material Components enabled in Sketchware
+     Pro (Library Manager → AppCompat and Design → ON).
+     MainActivity extends FragmentActivity and uses androidx.biometric,
+     so these libraries are mandatory for the project to compile.
+
+     Theme.MaterialComponents.Light.NoActionBar is a descendant of
+     Theme.AppCompat — this is also what androidx.biometric's dialog
+     fragment needs on devices that fall back to the fingerprint dialog.
+     ═══════════════════════════════════════════════════════════════ -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- AppCompat/Material attributes (no android: prefix) -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorControlHighlight</item>
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+        <!-- Framework attributes -->
+        <item name="android:windowBackground">@color/splash_background</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/brand_blue</item>
+        <!-- Never let system dark mode invert the app (API 29+) -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+    <style name="AppTheme.NoActionBarLaunch" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- Used by MainActivity: hides the status/nav chrome for the
+         trading terminal's immersive full-screen WebView UI. -->
+    <style name="AppTheme.FullScreen" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <!-- Used by DebugActivity (diagnostics screen). -->
+    <style name="AppTheme.DebugActivity" parent="AppTheme">
+        <item name="android:windowNoTitle">false</item>
+    </style>
+
+</resources>

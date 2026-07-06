@@ -1,0 +1,236 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.deriv.mt5terminal"
+4    android:versionCode="1250"
+5    android:versionName="12.5.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:5:2-64
+11-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:5:19-61
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:6:2-76
+12-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:6:19-73
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:7:2-73
+13-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:7:19-70
+14    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+14-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:8:2-76
+14-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:8:19-73
+15    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+15-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:9:2-74
+15-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:9:19-71
+16    <uses-permission android:name="android.permission.VIBRATE" />
+16-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:10:2-63
+16-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:10:19-60
+17    <uses-permission android:name="android.permission.VIBRATE_VENDOR_EFFECTS" />
+17-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:11:2-78
+17-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:11:19-75
+18    <uses-permission android:name="android.permission.WAKE_LOCK" />
+18-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:12:2-65
+18-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:12:19-62
+19    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+19-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:13:2-74
+19-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:13:19-71
+20    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
+20-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:14:2-81
+20-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:14:19-78
+21    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+21-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:15:2-91
+21-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:15:19-88
+22    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+22-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:16:2-84
+22-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:16:19-81
+23    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_HEALTH" />
+23-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:17:2-81
+23-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:17:19-78
+24    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+24-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:18:2-83
+24-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:18:19-80
+25    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+25-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:19:2-89
+25-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:19:19-86
+26    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROCESSING" />
+26-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:20:2-91
+26-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:20:19-88
+27    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+27-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:21:2-91
+27-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:21:19-88
+28    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+28-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:22:2-85
+28-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:22:19-82
+29    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+29-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:23:2-78
+29-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:23:19-75
+30    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+30-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:24:2-76
+30-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:24:19-73
+31    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+31-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:25:2-78
+31-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:25:19-75
+32    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+32-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:26:2-77
+32-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:26:19-74
+33    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+33-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:27:2-78
+33-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:27:19-75
+34    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+34-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:28:2-79
+34-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:28:19-76
+35    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+35-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:29:2-73
+35-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:29:19-70
+36    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+36-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:30:2-69
+36-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:30:19-66
+37    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+37-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:31:2-71
+37-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:31:19-68
+38
+39    <permission
+39-->[androidx.core:core:1.13.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/fa5206bd67f41e7058151361e3a9bb44/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
+40        android:name="com.deriv.mt5terminal.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+40-->[androidx.core:core:1.13.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/fa5206bd67f41e7058151361e3a9bb44/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
+41        android:protectionLevel="signature" />
+41-->[androidx.core:core:1.13.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/fa5206bd67f41e7058151361e3a9bb44/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
+42
+43    <uses-permission android:name="com.deriv.mt5terminal.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+43-->[androidx.core:core:1.13.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/fa5206bd67f41e7058151361e3a9bb44/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
+43-->[androidx.core:core:1.13.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/fa5206bd67f41e7058151361e3a9bb44/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
+44
+45    <application
+45-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:32:2-72:16
+46        android:name="com.deriv.mt5terminal.SketchApplication"
+46-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:37:3-36
+47        android:allowBackup="true"
+47-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:33:3-29
+48        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+48-->[androidx.core:core:1.13.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/fa5206bd67f41e7058151361e3a9bb44/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
+49        android:debuggable="true"
+50        android:extractNativeLibs="true"
+51        android:icon="@mipmap/ic_launcher"
+51-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:34:3-37
+52        android:label="@string/app_name"
+52-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:36:3-35
+53        android:requestLegacyExternalStorage="true"
+53-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:38:3-46
+54        android:roundIcon="@mipmap/ic_launcher_round"
+54-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:35:3-48
+55        android:theme="@style/AppTheme"
+55-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:40:3-34
+56        android:usesCleartextTraffic="true" >
+56-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:39:3-38
+57        <activity
+57-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:41:3-53:14
+58            android:name="com.deriv.mt5terminal.MainActivity"
+58-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:42:4-32
+59            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+59-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:43:4-97
+60            android:exported="true"
+60-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:48:4-27
+61            android:hardwareAccelerated="true"
+61-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:44:4-38
+62            android:supportsPictureInPicture="true"
+62-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:45:4-43
+63            android:theme="@style/AppTheme.FullScreen"
+63-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:46:4-46
+64            android:windowSoftInputMode="stateHidden" >
+64-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:47:4-45
+65            <intent-filter>
+65-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:49:4-52:20
+66                <action android:name="android.intent.action.MAIN" />
+66-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:50:5-57
+66-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:50:13-54
+67
+68                <category android:name="android.intent.category.LAUNCHER" />
+68-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:51:5-65
+68-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:51:15-62
+69            </intent-filter>
+70        </activity>
+71        <activity
+71-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:54:3-57:52
+72            android:name="com.deriv.mt5terminal.DebugActivity"
+72-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:55:4-33
+73            android:screenOrientation="portrait"
+73-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:56:4-40
+74            android:theme="@style/AppTheme.DebugActivity" />
+74-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:57:4-49
+75
+76        <provider
+76-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:58:3-68:14
+77            android:name="androidx.startup.InitializationProvider"
+77-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:59:4-58
+78            android:authorities="com.deriv.mt5terminal.androidx-startup"
+78-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:60:4-64
+79            android:exported="false" >
+79-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:61:4-28
+80            <meta-data
+80-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:62:4-64:40
+81                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+81-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:63:5-66
+82                android:value="androidx.startup" />
+82-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:64:5-37
+83            <meta-data
+83-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:65:4-67:40
+84                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+84-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:66:5-63
+85                android:value="androidx.startup" />
+85-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:67:5-37
+86            <meta-data
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+87                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+88                android:value="androidx.startup" />
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+89        </provider>
+90
+91        <uses-library
+91-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:69:3-71:31
+92            android:name="org.apache.http.legacy"
+92-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:70:4-41
+93            android:required="false" />
+93-->/storage/emulated/0/.sketchware/backups/DerivMT5/app/src/main/AndroidManifest.xml:71:4-28
+94
+95        <receiver
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+96            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+97            android:directBootAware="false"
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+98            android:enabled="true"
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+99            android:exported="true"
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+100            android:permission="android.permission.DUMP" >
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+101            <intent-filter>
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+102                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+103            </intent-filter>
+104            <intent-filter>
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+105                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+106            </intent-filter>
+107            <intent-filter>
+107-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+108                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+108-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+108-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+109            </intent-filter>
+110            <intent-filter>
+110-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+111                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+111-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+111-->[androidx.profileinstaller:profileinstaller:1.3.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/8.13/transforms/7738d16a894d843fdde4d331367bd6ad/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+112            </intent-filter>
+113        </receiver>
+114    </application>
+115
+116</manifest>
