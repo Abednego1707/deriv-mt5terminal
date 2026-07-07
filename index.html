@@ -8,36 +8,9 @@
       * { margin: 0; padding: 0; box-sizing: border-box; }
       html, body { height: 100%; overflow: hidden; background: #0a0a0f; }
       body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; display: flex; flex-direction: column; }
-
       .iframe-container { flex: 1; position: relative; background: #0a0a0f; overflow: hidden; min-height: 0; }
       iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; display: block; }
-
-      /* ── Ad‑blocking rules for the outer page ── */
-      .floating-banner,
-      #floating-banner,
-      [class*="banner"],
-      [id*="banner"],
-      [class*="ad-"],
-      [id*="ad-"],
-      [class*="ads"],
-      [id*="ads"],
-      .ad-container,
-      .ad-wrapper,
-      .advertisement,
-      .sponsored,
-      .promo,
-      [data-ad],
-      [data-ads],
-      ins.adsbygoogle,
-      .adsbygoogle {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-        width: 0 !important;
-        height: 0 !important;
-        overflow: hidden !important;
-      }
+      .floating-banner, #floating-banner, [class*="banner"], [id*="banner"] { display: none !important; }
     </style>
   </head>
   <body>
@@ -51,35 +24,7 @@
       ></iframe>
     </div>
     <script>
-      // Focus the iframe on load
-      document.getElementById('preview-iframe').addEventListener('load', function() {
-        this.focus();
-      });
-
-      // Optional: periodically try to remove ad elements from the outer page
-      // (does not affect the iframe content due to same‑origin policy)
-      setInterval(function() {
-        var selectors = [
-          '.floating-banner', '#floating-banner', '[class*="banner"]',
-          '[id*="banner"]', '[class*="ad-"]', '[id*="ad-"]',
-          '[class*="ads"]', '[id*="ads"]', '.ad-container',
-          '.ad-wrapper', '.advertisement', '.sponsored', '.promo',
-          '[data-ad]', '[data-ads]', 'ins.adsbygoogle', '.adsbygoogle'
-        ];
-        selectors.forEach(function(sel) {
-          var els = document.querySelectorAll(sel);
-          for (var i = 0; i < els.length; i++) {
-            els[i].style.display = 'none';
-            els[i].style.visibility = 'hidden';
-            els[i].style.opacity = '0';
-            els[i].style.width = '0';
-            els[i].style.height = '0';
-            els[i].style.overflow = 'hidden';
-            // Remove from DOM entirely (optional)
-            if (els[i].parentNode) els[i].parentNode.removeChild(els[i]);
-          }
-        });
-      }, 2000);
+      document.getElementById('preview-iframe').addEventListener('load', function() { this.focus(); });
     </script>
   </body>
 </html>
